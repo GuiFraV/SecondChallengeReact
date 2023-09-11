@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+README
+Présentation du code
+Le code fourni est un exemple d'une application React qui présente une liste de compétences d'un développeur web. Voici une brève explication de chaque partie du code :
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Importations
+javascript
+Copy code
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import './styles.css';
+StrictMode : Un outil pour mettre en évidence les problèmes potentiels dans une application.
+createRoot : Une méthode pour créer un rendu concurrentiel avec React.
+styles.css : Une feuille de style pour styliser l'application.
+Données
+javascript
+Copy code
+const skills = [
+  // ... (liste des compétences)
+];
+Il s'agit d'un tableau de compétences, où chaque compétence est représentée par un objet avec trois propriétés : skill (le nom de la compétence), level (le niveau de compétence) et color (une couleur associée à la compétence).
 
-## Available Scripts
+Composant principal : App
+javascript
+Copy code
+function App() {
+  return (
+    <div className="card">
+      <Avatar />
+      <div className="data">
+        <Intro />
+        <SkillList />
+      </div>
+    </div>
+  );
+}
+Le composant App est le composant principal de l'application. Il contient un avatar, une introduction et une liste de compétences.
 
-In the project directory, you can run:
+Composant Avatar
+javascript
+Copy code
+function Avatar() {
+  return (
+    <img
+      className="avatar"
+      src="data:image/jpeg;base64,..."
+    />
+  );
+}
+Ce composant affiche une image d'avatar en utilisant une URL en base64.
 
-### `npm start`
+Remarques
+Le composant Intro n'est pas défini dans le code fourni, mais il est probablement destiné à afficher une brève introduction ou une description du développeur.
+Le composant SkillList est également mentionné, mais sa définition n'est pas fournie. Il est probablement destiné à afficher la liste des compétences du tableau skills.
+Le code utilise des fonctionnalités modernes de React, comme le mode strict et le rendu concurrentiel.
+Comment exécuter le code
+Pour exécuter ce code, vous aurez besoin d'un environnement de développement React. Voici les étapes générales :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Installez Node.js et npm (le gestionnaire de paquets Node).
+Créez une nouvelle application React avec create-react-app.
+Remplacez le contenu du fichier App.js par le code fourni.
+Ajoutez le CSS approprié dans styles.css.
+Exécutez l'application avec npm start.
+L'application devrait s'exécuter dans votre navigateur par défaut, affichant l'avatar et la liste des compétences.
